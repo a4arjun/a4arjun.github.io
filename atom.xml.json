@@ -2,18 +2,13 @@
 layout: null
 ---
 
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+ {{ site.title }}
+ {{ site.url }}
+ {{ site.time | date_to_xmlschema }}
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
- <id>{{ site.url }}</id>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <author>
-   <name>{{ site.author.name }}</name>
-   <uri>{{ site.author.url }}</uri>
-   <email>{{ site.author.email }}</email>
- </author>
+ {{ site.author.name }}
+ {{ site.author.url }}
+ {{ site.author.email }}
 
  {% for post in site.posts limit: 10 %}
 
