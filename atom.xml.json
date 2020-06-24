@@ -4,11 +4,11 @@ layout: null
 [
  {% for post in site.posts limit: 10 %}
  {
-  "title": "{{ post.title }}",
-  "post-url": "{{ site.url }}{{ post.url }}",
+   "post-title": "{{ post.title }}",
+   "post-url": "{{ site.url }}{{ post.url }}",
    "perma": "{{ site.url }}{{ post.id }}",
    "post-date": "{{ post.date | date_to_xmlschema }}",
-   "post-content": "{{ post.content | xml_escape | truncatewords:50 }}"
+   "post-content": "{{ post.content }}"
  }
  {% endfor %}
 
