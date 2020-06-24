@@ -1,25 +1,15 @@
 ---
 layout: null
 ---
-
- {{ site.title }}
- {{ site.url }}
- {{ site.time | date_to_xmlschema }}
-
- {{ site.author.name }}
- {{ site.author.url }}
- {{ site.author.email }}
-
+[
  {% for post in site.posts limit: 10 %}
-
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <id>{{ site.url }}{{ post.id }}</id>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <content type="html">{{ post.content | xml_escape | truncatewords:50 }}</content>
- </entry>
-
+ {
+  "title": "{{ post.title }}",
+  "post-url": "{{ site.url }}{{ post.url }}",
+   "perma": "{{ site.url }}{{ post.id }}",
+   "post-date": "{{ post.date | date_to_xmlschema }}"
+   "post-content": "{{ post.content | xml_escape | truncatewords:50 }}"
+ },
  {% endfor %}
 
-</feed>
+]
