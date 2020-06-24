@@ -1,11 +1,11 @@
 # Site settings
-title: Gracle
+title: Mr Mad
 description: "io"
-url: "http://gracle.github.io"
+url: "http://a4arjun.github.io"
 author:
   name: "Arjun Venugopal"
   email: "arjun.venugopal@hotmail.com"
-  url: "https://gracle.github.io"
+  url: "https://a4arjun.github.io"
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
