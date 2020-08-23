@@ -9,3 +9,6 @@
 .post-body ul li {
     list-style: none;
 }
+img{
+    border-radius: 10px;
+}
