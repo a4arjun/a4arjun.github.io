@@ -1,0 +1,14 @@
+{
+  "name": "Your Great Site",
+  "short_name": "Site 😎",
+  "description": "Learn how to create and share something or other.",
+  "start_url": "/quiz/loader.php?app=true",
+  "background_color": "#000000",
+  "theme_color": "#141b39",
+  "display": "standalone",
+  "icons": [{
+    "src": "ico.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
