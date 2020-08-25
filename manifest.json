@@ -5,12 +5,12 @@ layout: null
   "name": "Your Great Site",
   "short_name": "Site 😎",
   "description": "Learn how to create and share something or other.",
-  "start_url": "/quiz/loader.php?app=true",
+  "start_url": "http://iquiz.22web.org/loader.php?app=true",
   "background_color": "#000000",
   "theme_color": "#141b39",
   "display": "standalone",
   "icons": [{
-    "src": "ico.png",
+    "src": "http://iquiz.22web.org/ico.png",
     "sizes": "512x512",
     "type": "image/png"
   }]
