@@ -2,11 +2,11 @@
 layout: null
 ---
 {
-  "name": "Your Great Site",
-  "short_name": "Site 😎",
-  "description": "Learn how to create and share something or other.",
+  "name": "iQuiz Malayalam Quiz Game",
+  "short_name": "iQuiz",
+  "description": "Malayalam Quiz game test your skills",
   "start_url": "http://iquiz.22web.org/loader.php?app=true",
-  "background_color": "#000000",
+  "background_color": "#252c4a",
   "theme_color": "#141b39",
   "display": "standalone",
   "icons": [{
