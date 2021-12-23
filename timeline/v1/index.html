@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#1C2333" />
+    <title>Timeline.js</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/monokai-sublime.min.css">
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+  <style>
+    html,
+    body{
+      background: #1C2333;
+    }
+    .flexbox{
+      display: flex;
+      justify-content: center;
+      padding-bottom:40px;
+      padding-top:20px;
+    }
+    .codeblock{
+      margin:20px;
+    }
+    h3{
+      color:white;
+    }
+
+  </style>
+  </head>
+  <body> 
+
+    <div class="codeblock">
+      <h3>Timeline.js  <font style="font-size:6pt">(v1.0.1a <i>Tyrannosaurus Rex</i>)</font></h3>
+    </div>
+
+    <div class="flexbox" id="timeline"></div>
+
+
+    <div class="codeblock">
+      <h3>The "HTML"</h3>
+      <pre>
+       <code class="language-html" style="border-radius:4px;">
+         &lt;html&gt;
+           &lt;body&gt;
+              &lt;div id="timeline"&gt;&lt;div&gt;
+             &lt;script src="path/to/timeline.js"&gt;&lt;/script&gt;
+           &lt;body&gt;
+         &lt;html&gt;
+       </code>
+     </pre>
+    </div>
+
+    <div class="codeblock">
+      <h3>Define your data</h3>
+      <pre>
+       <code class="language-javascript" style="border-radius:4px;">
+
+         const timelineData = [
+              {
+                  'time': 'Jan',
+                  'events': [
+                      'A nice month to start a year',
+                      'Roses are red',
+                  ],
+              },
+              {
+                  'time': 'Feb',
+                  'events': [
+                      'Violets are blue',
+                      'No. They are kind of purple',
+                  ],
+              },
+              {
+                  'time': 'Mar',
+                  'events': [
+                      'Lorem ipsum',
+                      'That is how it works',
+                  ],
+              },
+              {
+                  'time': 'Apr',
+                  'events': [
+                      'Twinkle, twinkle, little star',
+                      'Rain rain go away',
+                  ],
+              },
+         ];
+       </code>
+     </pre>
+    </div>
+
+    <div class="codeblock">
+      <h3>Configure your timeline</h3>
+      <pre>
+       <code class="language-javascript" style="border-radius:4px;">
+
+      const timelineConfig = {
+              'lineColor': '#0099ff',
+              'dotColor': '#1C2333',
+              'eventBackground': '#2B3245',
+              'eventText': '#acc'
+      };
+       </code>
+     </pre>
+    </div>
+
+    <div class="codeblock">
+      <h3>Initialize the timeline</h3>
+      <pre>
+       <code class="language-javascript" style="border-radius:4px;">
+
+      let timeline = new TimeLine(
+            'timeline', //id selector
+            timelineConfig, //pass empty object if you want to use default styling
+            timelineData //timeline data
+      );
+       </code>
+     </pre>
+    </div>
+
+    <div class="codeblock">
+      <h3>Draw the timeline</h3>
+      <pre>
+       <code class="language-javascript" style="border-radius:4px;">
+      timeline.draw();
+       </code>
+     </pre>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <script>
+
+       const timelineData = [
+              {
+                  'time': 'Jan',
+                  'events': [
+                      'A nice month to start a year',
+                      'Roses are red',
+                  ],
+              },
+              {
+                  'time': 'Feb',
+                  'events': [
+                      'Violets are blue',
+                      'No. They are kind of purple',
+                  ],
+              },
+              {
+                  'time': 'Mar',
+                  'events': [
+                      'Lorem ipsum',
+                      'Myaawoooo',
+                  ],
+              },
+              {
+                  'time': 'Apr',
+                  'events': [
+                      'Twinkle, twinkle, little star',
+                      'Rain rain go away',
+                  ],
+              },
+          ];
+
+      let timelineConfig =       {
+          'lineColor': '#0099ff',
+          'dotColor': '#1C2333',
+          'eventBackground': '#2B3245',
+          'eventText': '#acc'
+        };
+
+
+      let timeline = new TimeLine(
+        'timeline',
+        timelineConfig,
+        timelineData,
+      );
+
+      timeline.draw();
+
+    </script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>
