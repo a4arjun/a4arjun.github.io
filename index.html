@@ -186,155 +186,38 @@
         <font class="gradient">Projects</font>
       </nav>
       <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">T-XConnect - Video calling platform</div>
-          <div class="project-description">
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit...
-          </div>
-          <div
-            class="project-categories"
-            style="display: flex; align-items: center"
-          >
-            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
-            <span class="category-list">Web, JS, HTML, CSS</span>
-          </div>
-          <div class="project-footer">
-            <div class="date" style="display: flex; align-items: center">
-              <img src="./icons/calendar.svg" style="margin-right: 12px" />
-              <span class="date-time">2nd May 2022</span>
-            </div>
-            <div class="readmore">
-              <a href="#index">Preview</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-title">T-XDesk - Remote Desktop Client</div>
-          <div class="project-description">
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit...
-          </div>
-          <div
-            class="project-categories"
-            style="display: flex; align-items: center"
-          >
-            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
-            <span class="category-list">Web, Native, JS, HTML, CSS</span>
-          </div>
-          <div class="project-footer">
-            <div class="date" style="display: flex; align-items: center">
-              <img src="./icons/calendar.svg" style="margin-right: 12px" />
-              <span class="date-time">23rd March 2022</span>
+        
+        {% for post in paginator.posts %}
+        
+        
+            <div class="project-card">
+              <div class="project-title">
+                {{ post.title }}
+              </div>
+              <div class="project-description">
+                {{ post.content | strip_html | truncatewords:50 }}
+              </div>
+              <div
+                class="project-categories"
+                style="display: flex; align-items: center"
+              >
+                <img src="./icons/catIcon.svg" style="margin-right: 12px" />
+                <span class="category-list">Web, JS, HTML, CSS</span>
+              </div>
+              <div class="project-footer">
+                <div class="date" style="display: flex; align-items: center">
+                  <img src="./icons/calendar.svg" style="margin-right: 12px" />
+                  <span class="date-time">{{ post.date | date_to_string }}</span>
+                </div>
+                <div class="readmore">
+                  <a href="#index">Preview</a>
+                </div>
+              </div>
             </div>
-            <div class="readmore">
-              <a href="#index">Preview</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">T-ext - Realtime chat</div>
-          <div class="project-description">
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit...
-          </div>
-          <div
-            class="project-categories"
-            style="display: flex; align-items: center"
-          >
-            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
-            <span class="category-list">Web, JS, HTML, CSS</span>
-          </div>
-          <div class="project-footer">
-            <div class="date" style="display: flex; align-items: center">
-              <img src="./icons/calendar.svg" style="margin-right: 12px" />
-              <span class="date-time">4th April 2022</span>
-            </div>
-            <div class="readmore">
-              <a href="#index">Preview</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">
-            T-ravelogue - Travel booking and tour guide
-          </div>
-          <div class="project-description">
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit...
-          </div>
-          <div
-            class="project-categories"
-            style="display: flex; align-items: center"
-          >
-            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
-            <span class="category-list">Web, JS, HTML, CSS</span>
-          </div>
-          <div class="project-footer">
-            <div class="date" style="display: flex; align-items: center">
-              <img src="./icons/calendar.svg" style="margin-right: 12px" />
-              <span class="date-time">2nd May 2022</span>
-            </div>
-            <div class="readmore">
-              <a href="#index">Preview</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">
-            Timeline.js - A timeline generator for the events
-          </div>
-          <div class="project-description">
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit...
-          </div>
-          <div
-            class="project-categories"
-            style="display: flex; align-items: center"
-          >
-            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
-            <span class="category-list">Web, JS, HTML, CSS</span>
-          </div>
-          <div class="project-footer">
-            <div class="date" style="display: flex; align-items: center">
-              <img src="./icons/calendar.svg" style="margin-right: 12px" />
-              <span class="date-time">2n May 2022</span>
-            </div>
-            <div class="readmore">
-              <a href="#index">Preview</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">
-            Q Crawl - An Api for fetching famous quotes
-          </div>
-          <div class="project-description">
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit...
-          </div>
-          <div
-            class="project-categories"
-            style="display: flex; align-items: center"
-          >
-            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
-            <span class="category-list">Web, JS, HTML, CSS</span>
-          </div>
-          <div class="project-footer">
-            <div class="date" style="display: flex; align-items: center">
-              <img src="./icons/calendar.svg" style="margin-right: 12px" />
-              <span class="date-time">2n May 2022</span>
-            </div>
-            <div class="readmore">
-              <a href="#index">Preview</a>
-            </div>
-          </div>
-        </div>
+        
+        
+        {% endfor %}
       </div>
       <div
         class="see-all"
