@@ -1,13 +1,43 @@
 ---
 layout: default
----
-<article id="post-page">		
-	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line"><b>{{ page.date | date_to_string }}</b></time>
-		<br/><br>
-	<div>
 
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+nav{
+	padding:16px;
+	border-bottom:1px solid lightgrey;
+}
+nav a{
+	border-radius:4px;
+	color:black;
+	padding:10px;
+	text-decoration: none;
+	border:1px solid lightgray;
+}
+
+.container{
+	padding: 16px;
+}
+.container h1{
+	padding-block:12px;
+}
+
+.date{
+	padding-block:12px;
+}
+
+</style>
+<nav>
+	<a href="/">Back</a>
+</nav>
+<div class="container">
+	<h1>{{ page.title }}</h1>
+	<p class="date">{{ page.date | date_to_xmlschema }}</p>
+	<div class="content">
 		{{ content }}
-		
 	</div>
-</article>
+</div>
 
