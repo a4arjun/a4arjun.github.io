@@ -252,6 +252,7 @@ svg *{
   transform-origin: center center;
 }
 /* Card testing */
+#projects{min-height:auto;}
 .projects-grid{
   padding: 30px 60px 20px 60px;
   display: grid;
