@@ -1,111 +1,13 @@
 <!DOCTYPE html>
 <html>
-
-{% include head.html %}
-
-<body>
-	<div id="wrap">
-	  	
-	  	<!-- Navigation -->
-	  	{% include menu.html %}
-    
-    <!-- Icon menu -->
-	  <a {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
-	  	<div id="menu"></div>
-	  </a>
-
-      <!-- Header -->
-      {% if site.custom_header == true %}
-        {% include header-custom.html %}
-      {% else %}
-        {% include header.html %}
-      {% endif %}
-
-    <!-- Main content -->
-	<div class="main" style="padding-top:30px; background:#fff;">
-	  <div class="container" id="container">
-		<div class="row">
-			<div class="col-md-8">
-		
-
-			{{ content }}
-
-	  
-		
-		  <!-- Pagination links -->
-      {% if paginator.total_pages > 1 %}
-        <div class="pagination">
-          {% if paginator.previous_page == 1 %}
-            <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
-          {% elsif paginator.previous_page%}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
-          {% else %}
-            <span class="page-item">&laquo;</span>
-          {% endif %}
-        
-          {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              <span class="page-item">{{ page }}</span>
-            {% elsif page == 1 %}
-              <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">{{ page }}</a>
-            {% else %}
-              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
-            {% endif %}
-          {% endfor %}
-        
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&raquo;</a>
-          {% else %}
-            <span class="page-item">&raquo;</span>
-          {% endif %}
-        </div>
-        {% endif %}
-
-	  </div>
-	          <!-- Sidebar Widgets Column -->
-
-
-
-<div class="col-md-4">
-<div id="accordian">
-<h3>Categories</h3>
-
-
-{% for category in site.categories %}
- <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#{{ category[0] }}" aria-expanded="false" aria-controls="{{ category[2] }}">
-          {{ category[0] }}
-        </button>
-      </h5>
-    </div>
-    <div id="{{ category [0] }}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
-        
-		 <ul class="list-group list-group-flush">
-		    {% for post in category[1] %}
-		      <li class="list-group-item"><a href="{{ post.url }}">{{ post.title }}</a></li>
-		    {% endfor %}
-	  	</ul>
-	  </div>
-    </div>
-  </div>
-
-{% endfor %}
-</div>
-<br/>
-<br/>
-</div>
-
-
-	</div><!-- row -->
-</div><!--container -- >		
-	    <!-- Footer -->
-	    {% include footer.html %}
-		</div>
-	    <!-- Script -->
-      {% include script.html %}
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Arjun Venugopal</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+	  {{content}}
+  </body>
 </html>
