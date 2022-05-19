@@ -1,19 +1,419 @@
----
-layout: default
----
-<!-- Posts -->
- 
-	{% for post in paginator.posts %}
-<div class="card mb-4">
-	  <div class="card-body">
-	  	<h2 class="card-title"><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-	  	
-	  	<p class="card-text">{{ post.content | strip_html | truncatewords:50 }}</p>
-		 <a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}" class="btn btn-success">Read More &rarr;</a>
-	</div>
-	<div class="card-footer text-muted">
-		<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">Posted on {{ post.date | date_to_string }}</time>
-	  </div>
-</div>
 
-    {% endfor %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Arjun Venugopal</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navcol nav-left brand">
+        <img src="./icons/home.svg" style="width: 30px" />
+      </div>
+      <div class="navcol nav-center">
+        <a class="nav-link" href="#projects">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="navcol nav-right">
+        <img
+          id="switch"
+          src="./icons/moon.svg"
+          alt="toggle"
+          style="width: 30px"
+        />
+      </div>
+    </nav>
+    <!--     Hero section -->
+    <div class="section hero">
+      <div class="overlay">
+        <svg
+          viewBox="0 0 682 640"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="gears">
+            <g filter="url(#filter0_d_2_24)">
+              <path
+                id="gb"
+                d="M307.523 355.625C321.139 347.118 333.47 336.743 344.156 324.849L382.68 347.096L417.758 286.338L379.311 264.139C384.199 249.215 387.075 233.385 387.614 216.976L431.353 209.264L419.166 140.174L375.435 147.887C369.391 132.908 361.283 118.98 351.45 106.463L380.037 72.3993L326.294 27.3071L297.732 61.3419C283.781 53.8662 268.674 48.2779 252.752 44.9247V0.537231H182.597V44.9247C166.674 48.2779 151.567 53.8662 137.614 61.3419L109.054 27.3071L55.3112 72.4009L83.8945 106.465C74.0632 118.981 65.9551 132.911 59.9115 147.888L16.1806 140.176L4 209.266L47.7326 216.978C48.2716 233.389 51.1486 249.215 56.0369 264.144L17.5869 286.341L52.6659 347.097L91.1916 324.857C101.874 336.746 114.206 347.123 127.823 355.63L112.616 397.406L178.542 421.397L193.729 379.678C201.555 380.785 209.547 381.372 217.675 381.372C225.802 381.372 233.796 380.788 241.622 379.678L256.807 421.4L322.73 397.403L307.523 355.625ZM217.671 300.916C168.27 300.916 128.079 260.727 128.079 211.324C128.079 161.924 168.27 121.731 217.671 121.731C267.073 121.731 307.264 161.924 307.264 211.324C307.264 260.727 267.074 300.916 217.671 300.916Z"
+                fill="#6E82C8"
+              />
+            </g>
+            <g filter="url(#filter1_d_2_24)">
+              <path
+                id="gs"
+                d="M676.821 234.272L677.998 194.643L652.92 193.898C651.348 185.164 648.538 176.515 644.416 168.199L664.111 152.64L639.539 121.537L619.847 137.09C612.824 131.254 605.055 126.496 596.809 122.904L601.9 98.3003L563.084 90.2614L557.984 114.849C549.039 114.862 540.033 116.132 531.207 118.73L519.315 96.643L484.406 115.443L496.299 137.534C489.279 143.465 483.254 150.3 478.316 157.753L454.991 148.469L440.331 185.305L463.675 194.604C462.139 203.467 461.839 212.558 462.848 221.634L439.02 229.516L451.461 267.159L475.289 259.282C479.956 267.304 485.629 274.4 492.065 280.523L478.886 301.872L512.616 322.703L525.825 301.315C534.329 304.366 543.248 306.224 552.299 306.808L555.922 331.673L595.156 325.943L591.542 301.109C595.729 299.569 599.861 297.715 603.906 295.537C607.955 293.361 611.776 290.924 615.367 288.28L634.11 304.967L660.477 275.364L641.722 258.657C646.22 250.773 649.566 242.303 651.703 233.525L676.821 234.272ZM582.353 255.507C557.765 268.744 526.995 259.516 513.764 234.938C500.521 210.357 509.751 179.58 534.339 166.349C558.914 153.108 589.682 162.342 602.925 186.924C616.154 211.507 606.931 242.267 582.353 255.507Z"
+                fill="#684DB5"
+              />
+            </g>
+            <g filter="url(#filter2_d_2_24)">
+              <path
+                id="gm"
+                d="M609.071 408.308L578.829 418.091C573.062 408.068 565.934 398.993 557.726 391.092L574.628 364.118L532.073 337.456L515.181 364.408C504.555 360.485 493.295 358.015 481.671 357.214L477.286 325.742L427.547 332.675L431.932 364.147C420.976 368.094 410.813 373.555 401.662 380.231L378.054 358.921L344.406 396.199L368.033 417.534C362.302 427.378 357.933 438.053 355.128 449.274L323.359 448.125L321.542 498.309L353.31 499.461C355.315 511.043 358.919 521.973 363.862 532.078L338.796 551.617L369.666 591.224L394.782 571.651C403.532 579.024 413.304 585.161 423.795 589.851L417.137 620.977L466.248 631.468L472.898 600.39C478.556 600.406 484.278 600.022 490.038 599.221C495.802 598.419 501.414 597.209 506.848 595.656L521.741 623.736L566.109 600.207L551.2 572.095C560.018 564.716 567.727 556.136 574.132 546.653L603.639 558.618L622.508 512.077L593.058 500.135C595.043 489.073 595.518 477.565 594.287 465.873L624.536 456.084L609.071 408.308ZM482.097 542.179C447.067 547.057 414.599 522.534 409.722 487.509C404.835 452.481 429.364 420.01 464.393 415.135C499.419 410.25 531.878 434.777 536.768 469.807C541.642 504.832 517.122 537.293 482.097 542.179Z"
+                fill="#6B89A5"
+              />
+            </g>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_2_24"
+              x="0"
+              y="0.537231"
+              width="435.353"
+              height="428.863"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_2_24"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_2_24"
+                result="shape"
+              />
+            </filter>
+            <filter
+              id="filter1_d_2_24"
+              x="435.02"
+              y="90.2614"
+              width="246.979"
+              height="249.412"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_2_24"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_2_24"
+                result="shape"
+              />
+            </filter>
+            <filter
+              id="filter2_d_2_24"
+              x="317.542"
+              y="325.742"
+              width="310.993"
+              height="313.726"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_2_24"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_2_24"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+      <p>Hi there! My name is,</p>
+      <h1 class="gradient">Arjun Venugopal</h1>
+      <h2>Mechanical Engineer . Software developer . Photographer</h2>
+      <br />
+      <hr />
+      <br />
+      <p class="brief">
+        I am Arjun Venugopal. I’m an enthusiastic, self-motivated, reliable,
+        responsible and hard working person. I am a mature team worker and
+        adaptable to all challenging situations. I am able to work well both in
+        a team environment as well as using own initiative. I am able to work
+        well under pressure and adhere to strict deadlines.
+      </p>
+    </div>
+    <div class="section" id="projects">
+      <nav class="navbar-sticky brand">
+        <font class="gradient">Projects</font>
+      </nav>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-title">T-XConnect - Video calling platform</div>
+          <div class="project-description">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+          </div>
+          <div
+            class="project-categories"
+            style="display: flex; align-items: center"
+          >
+            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
+            <span class="category-list">Web, JS, HTML, CSS</span>
+          </div>
+          <div class="project-footer">
+            <div class="date" style="display: flex; align-items: center">
+              <img src="./icons/calendar.svg" style="margin-right: 12px" />
+              <span class="date-time">2nd May 2022</span>
+            </div>
+            <div class="readmore">
+              <a href="#index">Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">T-XDesk - Remote Desktop Client</div>
+          <div class="project-description">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+          </div>
+          <div
+            class="project-categories"
+            style="display: flex; align-items: center"
+          >
+            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
+            <span class="category-list">Web, Native, JS, HTML, CSS</span>
+          </div>
+          <div class="project-footer">
+            <div class="date" style="display: flex; align-items: center">
+              <img src="./icons/calendar.svg" style="margin-right: 12px" />
+              <span class="date-time">23rd March 2022</span>
+            </div>
+            <div class="readmore">
+              <a href="#index">Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">T-ext - Realtime chat</div>
+          <div class="project-description">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+          </div>
+          <div
+            class="project-categories"
+            style="display: flex; align-items: center"
+          >
+            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
+            <span class="category-list">Web, JS, HTML, CSS</span>
+          </div>
+          <div class="project-footer">
+            <div class="date" style="display: flex; align-items: center">
+              <img src="./icons/calendar.svg" style="margin-right: 12px" />
+              <span class="date-time">4th April 2022</span>
+            </div>
+            <div class="readmore">
+              <a href="#index">Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            T-ravelogue - Travel booking and tour guide
+          </div>
+          <div class="project-description">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+          </div>
+          <div
+            class="project-categories"
+            style="display: flex; align-items: center"
+          >
+            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
+            <span class="category-list">Web, JS, HTML, CSS</span>
+          </div>
+          <div class="project-footer">
+            <div class="date" style="display: flex; align-items: center">
+              <img src="./icons/calendar.svg" style="margin-right: 12px" />
+              <span class="date-time">2nd May 2022</span>
+            </div>
+            <div class="readmore">
+              <a href="#index">Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            Timeline.js - A timeline generator for the events
+          </div>
+          <div class="project-description">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+          </div>
+          <div
+            class="project-categories"
+            style="display: flex; align-items: center"
+          >
+            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
+            <span class="category-list">Web, JS, HTML, CSS</span>
+          </div>
+          <div class="project-footer">
+            <div class="date" style="display: flex; align-items: center">
+              <img src="./icons/calendar.svg" style="margin-right: 12px" />
+              <span class="date-time">2n May 2022</span>
+            </div>
+            <div class="readmore">
+              <a href="#index">Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            Q Crawl - An Api for fetching famous quotes
+          </div>
+          <div class="project-description">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+          </div>
+          <div
+            class="project-categories"
+            style="display: flex; align-items: center"
+          >
+            <img src="./icons/catIcon.svg" style="margin-right: 12px" />
+            <span class="category-list">Web, JS, HTML, CSS</span>
+          </div>
+          <div class="project-footer">
+            <div class="date" style="display: flex; align-items: center">
+              <img src="./icons/calendar.svg" style="margin-right: 12px" />
+              <span class="date-time">2n May 2022</span>
+            </div>
+            <div class="readmore">
+              <a href="#index">Preview</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="see-all"
+        style="width: 100%; text-align: center; padding-bottom: 60px"
+      >
+        <a href="#" style="font-size: 1.2rem">See all projects...</a>
+      </div>
+    </div>
+    <div class="section" id="about">
+      <nav class="navbar-sticky brand">
+        <font class="gradient">About</font>
+      </nav>
+      <div class="about-grid">
+        <div class="right-section">
+          <div id="timeline"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <nav class="navbar-sticky brand gradient">Contact</nav>
+      <div class="contact">
+        <div class="contact-form">
+          <h2>Drop me a message</h2>
+          <div class="floating-label">
+            <input
+              type="text"
+              class="text-input"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label class="input-label">Type your full name</label>
+          </div>
+          <div class="floating-label">
+            <input
+              type="text"
+              class="text-input"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label class="input-label">Email address</label>
+          </div>
+
+          <div class="floating-label">
+            <textarea
+              class="text-input"
+              autocomplete="off"
+              placeholder=" "
+            ></textarea>
+            <label class="input-label">Type your message</label>
+          </div>
+          <div class="action-buttons">
+            <button class="btn green">Send</button>
+          </div>
+        </div>
+        <div class="social">
+          <h2>Talk to me</h2>
+          <p class="address">
+            <i data-feather="map-pin"></i> Kanhangad, Kerala, India
+          </p>
+          <p class="mail">
+            <i data-feather="mail"></i> arjun.venugopal@hotmail.com
+          </p>
+          <p class="phone"><i data-feather="phone"></i> +91 9497126199</p>
+          <div class="social-icons" style="text-align:center">
+            <i data-feather="github"></i>
+            <i data-feather="linkedin"></i>
+            <i data-feather="twitter"></i>
+            <i data-feather="facebook"></i>
+            <i data-feather="codepen"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://a4arjun.github.io/timeline/v1/timeline.js"></script>
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
