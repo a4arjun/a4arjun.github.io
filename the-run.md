@@ -2,7 +2,7 @@
 layout: default
 title: Adventure of Tim
 ---
-<h1>dventures of Tim</h1>
+<h1>Adventures of Tim</h1>
 <p>
   <ul>
     <li>A simple 2D platformer made with Unity</li>
