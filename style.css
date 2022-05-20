@@ -236,7 +236,7 @@ svg *{
   border-radius: 4px;
 }
 .brief{
-  color:rgb(82, 102, 119) !important;
+  color:var(--card-desc-text) !important;
   max-width: 600px;
   letter-spacing: 1px;
   text-align: justify;
