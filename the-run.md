@@ -24,5 +24,5 @@ title: Adventure of Tim
 
 <div class="screenshot">
   <h3>Game play World 1</h3>
-  <video width="80%" controls src="./images/the-run/preview.mp4">
+  <video width="70%" controls src="./images/the-run/preview.mp4">
 </div>
