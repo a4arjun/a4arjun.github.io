@@ -450,7 +450,7 @@ About section
   width:100%;
 }
 
-.screenshot img{
+.screenshot img, .screenshot video{
 	width:100%;
 	max-width:480px;
 	margin:10px;
