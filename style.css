@@ -451,6 +451,7 @@ About section
 }
 
 .screenshot img{
+	width:100%;
 	max-width:480px;
 	margin:10px;
 	border-radius:8px;
