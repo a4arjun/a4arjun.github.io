@@ -1,5 +1,5 @@
 ---
-title: X-Connect-video-calling-platform
+title: X-Connect video calling platform
 categories: Web
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur ultricies viverra. Proin elementum orci at augue ultrices ullamcorper. Aenean ut ante lacus. In venenatis luctus vulputate. Aliquam ut dolor quis lacus interdum mattis. Duis sed dolor purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer feugiat gravida felis nec gravida. Nullam erat tortor, egestas sit amet luctus sit amet, sagittis non ante.
