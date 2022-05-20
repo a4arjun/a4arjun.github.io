@@ -216,7 +216,7 @@ svg *{
   transform-box: fill-box;
 }
 .hero p{
-  color: lime;
+  color: rgb(115, 121, 139);
 }
 .hero h1{
   font-size: 5.4rem;
