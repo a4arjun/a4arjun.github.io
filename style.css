@@ -239,8 +239,6 @@ svg *{
   color:var(--card-desc-text) !important;
   max-width: 600px;
   letter-spacing: 1px;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .section{
