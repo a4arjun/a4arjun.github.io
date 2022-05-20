@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Adventure of Tim
 ---
 <h1>Adventures of Tim</h1>
