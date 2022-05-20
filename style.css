@@ -442,9 +442,17 @@ About section
 /* Contact end */
 /* 
 .screenshot{
+	display:flex;
+	justify-content:center;
   padding:10px;
   margin:10px;
   width:100%;
+	max-width:600px;
+}
+
+.screenshot img{
+	margin:10px;
+	border-radius:8px;
 }
 */
 @media screen and (max-width: 1024px){
