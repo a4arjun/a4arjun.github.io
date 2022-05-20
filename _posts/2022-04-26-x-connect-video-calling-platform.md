@@ -12,7 +12,7 @@ categories: Web
   <li>Works well with mobile browsers</li>
   <li><a href="https://t-xconnect.herokuapp.com">Live demo</a></li>
 </ul>
-
+<br>
 <h2>Screenshots</h2>
 <p>**The screenshots are took straight out of Figma. Not from the actual app.</p>
 
