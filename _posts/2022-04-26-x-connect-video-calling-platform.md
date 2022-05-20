@@ -2,6 +2,41 @@
 title: X-Connect video calling platform
 categories: Web
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur ultricies viverra. Proin elementum orci at augue ultrices ullamcorper. Aenean ut ante lacus. In venenatis luctus vulputate. Aliquam ut dolor quis lacus interdum mattis. Duis sed dolor purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer feugiat gravida felis nec gravida. Nullam erat tortor, egestas sit amet luctus sit amet, sagittis non ante.
 
-Duis euismod at est eget dapibus. Aenean sagittis auctor diam, a dignissim justo consectetur tristique. Phasellus ac rutrum tortor. Morbi nisl erat, vehicula vel neque at, euismod auctor erat. Nullam tincidunt euismod nisl, vitae sagittis tellus mattis sed. Ut venenatis, quam convallis venenatis sodales, arcu sem porta nisl, ut dapibus nunc felis a nisl. Etiam eget erat risus. Suspendisse eu odio et purus aliquet rhoncus at id ipsum. Suspendisse semper finibus magna, in lacinia elit porta in. Quisque faucibus sem a nibh volutpat, ac accumsan purus sollicitudin. Maecenas ut libero id augue condimentum euismod. Nulla facilisi. Nam ac ultrices nulla. Quisque tincidunt mi at odio blandit luctus. Etiam quam odio, dictum id luctus non, tincidunt at sem.
+<h2>Features</h2>
+<ul>
+  <li>Peer-to-peer video call using WebRTC technology</li>
+  <li>User can use a disposable invite link to connect</li>
+  <li>Runs on browser</li>
+  <li>Cross-platform support as PWA</li>
+  <li>Works well with mobile browsers</li>
+  <li><a href="https://t-xconnnect.herokuapp.com">Live demo</a></li>
+</ul>
+
+<h2>Screenshots</h2>
+<p>**The screenshots are took straight out of Figma. Not from the actual app.</p>
+
+<div class="screenshot">
+  <h3>Create a call</h3>
+  <img src="./images/t-xconnect/create-link.png">
+</div>
+
+<div class="screenshot">
+  <h3>Join a call</h3>
+  <img src="./images/t-xconnect/join-a-call.png">
+</div>
+
+<div class="screenshot">
+  <h3>Connecting screen</h3>
+  <img src="./images/t-xconnect/connecting-screen.png">
+</div>
+
+<div class="screenshot">
+  <h3>Default display mode</h3>
+  <img src="./images/t-xconnect/default-mode.png">
+</div>
+
+<div class="screenshot">
+  <h3>Split mode</h3>
+  <img src="./images/t-xconnect/split-mode.png">
+</div>
