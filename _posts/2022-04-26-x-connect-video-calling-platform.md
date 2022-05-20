@@ -10,7 +10,7 @@ categories: Web
   <li>Runs on browser</li>
   <li>Cross-platform support as PWA</li>
   <li>Works well with mobile browsers</li>
-  <li><a href="https://t-xconnnect.herokuapp.com">Live demo</a></li>
+  <li><a href="https://t-xconnect.herokuapp.com">Live demo</a></li>
 </ul>
 
 <h2>Screenshots</h2>
