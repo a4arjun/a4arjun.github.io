@@ -1,13 +1,115 @@
----
-layout: default
----
-<style>
-	#page{
-		text-align:center;
-	}
-</style>
-<article id="page">
-	
-  {{ content }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
 
-</article>
+        font-family: "Inter", sans-serif;
+      }
+      nav {
+        padding: 16px;
+        border-bottom: 1px solid lightgrey;
+      }
+      nav a {
+        border-radius: 4px;
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        border: 1px solid lightgray;
+      }
+      .container {
+        padding: 16px;
+        margin-inline: 20%;
+      }
+      .container h1 {
+        padding-block: 12px;
+      }
+
+      .date {
+        padding-block: 12px;
+      }
+
+      .line {
+        border: 0;
+        margin-block: 10px;
+        height: 1px;
+        background-color: lightgrey;
+      }
+      .content {
+        font-size: 1.2rem;
+        color: #555;
+      }
+      .content p {
+        line-height: 1.5;
+      }
+      .screenshot {
+        width: auto;
+        margin-block: 30px;
+      }
+      .screenshot img,
+      .screenshot video {
+        margin-block: 12px;
+        width: 100%;
+        border-radius: 8px;
+      }
+      .screenshot > * {
+        margin-block: 8px;
+      }
+      @media (prefers-color-scheme: dark) {
+        nav a {
+          color: white;
+        }
+        .content {
+          color: rgb(255, 255, 225);
+        }
+      }
+      @media screen and (max-width: 992px) {
+        .container {
+          padding: 16px;
+          margin-inline: 10%;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .container {
+          padding: 16px;
+          margin-inline: 10%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .container {
+          padding: 16px;
+          margin-inline: 5%;
+        }
+      }
+      @media screen and (max-width: 552px) {
+        .container {
+          padding: 16px;
+          margin-inline: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="./">Back</a>
+    </nav>
+
+    <div class="container">
+      <h1>Post title</h1>
+      <p class="date">2nd April 2022</p>
+      <hr class="line" />
+      <div class="content">
+	      {{ content }}
+      </div>
+    </div>
+  </body>
+</html>
