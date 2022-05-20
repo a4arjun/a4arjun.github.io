@@ -2,6 +2,15 @@
 layout: default
 title: Adventure of Tim
 ---
+<h1>dventures of Tim</h1>
+<p>
+  <ul>
+    <li>A simple 2D platformer made with Unity</li>
+    <li>The goal is to collect coins and escape from the
+      island</li>
+    <li>Platforms: Mobile, PC, WebGL</li>
+  </ul>
+</p>
 
 <div class="screenshot">
   <h3>Main Screen</h3>
