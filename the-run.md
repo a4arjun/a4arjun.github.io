@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Adventure of Tim
 ---
 <h1>Adventures of Tim</h1>
