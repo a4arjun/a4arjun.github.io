@@ -440,7 +440,7 @@ About section
 }
 
 /* Contact end */
-/* 
+
 .screenshot{
 	display:flex;
 	justify-content:center;
@@ -454,7 +454,7 @@ About section
 	margin:10px;
 	border-radius:8px;
 }
-*/
+
 @media screen and (max-width: 1024px){
 
   .projects-grid{
