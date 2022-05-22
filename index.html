@@ -239,28 +239,34 @@ layout: default
   method="POST">
           <div class="floating-label">
             <input
+                   name="name"
               type="text"
               class="text-input"
               autocomplete="off"
               placeholder=" "
+                   required
             />
             <label class="input-label">Type your full name</label>
           </div>
           <div class="floating-label">
             <input
-              type="text"
+                   name="email"
+              type="email"
               class="text-input"
               autocomplete="off"
               placeholder=" "
+                   required
             />
             <label class="input-label">Email address</label>
           </div>
 
           <div class="floating-label">
             <textarea
+                      name="message"
               class="text-input"
               autocomplete="off"
               placeholder=" "
+                      required
             ></textarea>
             <label class="input-label">Type your message</label>
           </div>
