@@ -5,6 +5,15 @@ title: Color book - A Browser based coloring book for kids
 
 A coloring game for kids that runs on browser. Player can choose images and color them.<br>
 <br>
+
+### Live demo
+
+<br>
+
+Demo: [https://colorbook.a4arjun.repl.co/](https://colorbook.a4arjun.repl.co/)
+
+<br>
+
 ### Screenshots
 <div class="screenshot">
   
@@ -22,7 +31,3 @@ A coloring game for kids that runs on browser. Player can choose images and colo
   
 </div>
 
-### Live demo
-<br>
-
-Demo: [https://colorbook.a4arjun.repl.co/](https://colorbook.a4arjun.repl.co/)
