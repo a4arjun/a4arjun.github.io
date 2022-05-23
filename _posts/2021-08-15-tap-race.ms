@@ -1,0 +1,12 @@
+---
+layout: post
+title: Tap race: Brick-game inspired car racing game
+---
+
+- Player can control the car by tapping on the screen
+- The goal is to keep the car running without hitting the enemy cars.
+
+### Preview
+
+
+<video src="./images/tap-race/preview.mp4">
