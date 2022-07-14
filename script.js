@@ -47,7 +47,7 @@ nightSwitch.addEventListener("click", (e) => {
 const timelineData = [
   {
     time: "2022",
-    events: ["Journey continues. Alive till 2022 May"],
+    events: ["Journey continues. Alive till 2022 July"],
   },
   {
     time: "2021",
@@ -59,8 +59,6 @@ const timelineData = [
     time: "2020",
     events: [
       "Joined as a volunteer in Covid & Flood control cell IT Suport team, Kasaragod dist.",
-      "Covid v1.0. Couldn't join the company due to lockdown",
-      "Abu dhabi! Got hired by a company in Abu Dhabi UAE",
     ],
   },
   {
