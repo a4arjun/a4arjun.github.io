@@ -46,10 +46,6 @@ nightSwitch.addEventListener("click", (e) => {
 
 const timelineData = [
   {
-    time: "2022",
-    events: ["Journey continues. Alive till 2022 July"],
-  },
-  {
     time: "2021",
     events: [
       "Started my career as Structural designer in Friends Steel & Aluminum Works, Abu Dhabi, UAE",
@@ -58,7 +54,7 @@ const timelineData = [
   {
     time: "2020",
     events: [
-      "Joined as a volunteer in Covid & Flood control cell IT Suport team, Kasaragod dist.",
+      "Joined as a volunteer in the Covid and Flood Control Cell IT Support team, Kasaragod District.",
     ],
   },
   {
